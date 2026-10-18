@@ -426,7 +426,7 @@ body { overflow-x:clip; }
 .section {padding-block:clamp(76px,10vw,140px);border-top:1px solid var(--line);backdrop-filter:none;-webkit-backdrop-filter:none}
 .site-header {border-bottom:0;box-shadow:none;background:#e7e4e1;backdrop-filter:none;-webkit-backdrop-filter:none}
 .site-header.scrolled {box-shadow:none}
-.header-top {padding-block:8px 0}.logo-name {line-height:1}.main-nav a {padding-top:2px}
+.header-top {padding-block:8px 10px}.logo-name {line-height:1}.main-nav a {padding-top:2px}
 .main-nav {gap:clamp(15px,3vw,40px);padding-bottom:12px}.main-nav a {font-size:.74rem;letter-spacing:.13em}
 .hero {background:#e7e4e1;--bg-light:#e7e4e1}
 .hero-inner {min-height:0;padding-block:0 28px;grid-template-columns:1fr 1fr;gap:20px}
@@ -441,7 +441,7 @@ body { overflow-x:clip; }
 #about {background:var(--bg-light)}.intro{grid-template-columns:.7fr 1.3fr;gap:70px}.intro-body>p:last-child{font-size:.9rem;line-height:1.9}.me{font-size:clamp(8rem,19vw,16rem);letter-spacing:-.08em}
 .stats{gap:0;border-block:1px solid var(--line);margin-top:70px}.stat {background:none;border:0;border-radius:0;box-shadow:none;padding:32px 24px}.stat+.stat{border-left:1px solid var(--line)}.stat b{font-size:clamp(2.8rem,5vw,4.3rem)}.stat span{font-size:.65rem;letter-spacing:.15em}
 .skill-cards{margin-top:32px;gap:24px}.skill-card{min-height:190px;padding:30px;border-radius:8px}.skill-card h3{font-size:1.3rem;letter-spacing:.02em;max-width:300px}.skill-card:after{content:'↗';position:absolute;right:28px;top:20px;font-size:2rem;font-weight:300;opacity:.6;transition:transform .3s}.skill-card:hover:after{transform:translate(4px,-4px)}
-#projects .section-head .accent-line {font-size:clamp(1.9rem,4vw,3.4rem)}
+#projects .section-head .accent-line {font-size:clamp(1.35rem,2.5vw,2rem)}
 .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px}.project{gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg-light)}.project-media{border:0;border-radius:0;box-shadow:none;aspect-ratio:1.65;background:linear-gradient(140deg,var(--surface),var(--tint));transition:filter .4s}.project:hover .project-media{transform:none;box-shadow:none;filter:saturate(1.3)}.project-frame{background:none;border:0;border-radius:0;box-shadow:none;gap:14px;padding:26px;justify-content:flex-start}.project-cat{font:400 .65rem var(--font-label);letter-spacing:.16em}.project-name{font:600 clamp(1.15rem,2vw,1.55rem) var(--font-display);letter-spacing:-.025em;line-height:1.25}.project-desc{font-size:.8rem;line-height:1.8}.tags{margin:0}.tag{font-size:.6rem;padding:5px 9px;background:none}.project-links{display:flex;gap:12px;align-items:center;margin-top:auto;padding-top:12px}.view{font-size:.65rem;padding:9px 13px;cursor:pointer}.project-details{font:500 .67rem var(--font-body);border:0;border-bottom:1px solid var(--line);padding:7px 0;color:var(--title-dark);background:none;cursor:pointer}.metric{right:18px;bottom:16px;padding:10px 14px;background:var(--bg-light)}.metric b{font-size:1.7rem}.metric small{font-size:.6rem}.badge{top:18px;left:18px;border-radius:4px;font-size:.6rem}.filter{font-size:.66rem;padding:11px 18px;background:transparent;border-color:var(--line)}
 .project-media path{stroke-dasharray:5 6;animation:flow 14s linear infinite;animation-play-state:paused}.project.in-view .project-media path{animation-play-state:running}@keyframes flow{to{stroke-dashoffset:-110}}
 .quote-band{background:var(--title-dark);padding-block:clamp(100px,14vw,190px);backdrop-filter:none;-webkit-backdrop-filter:none}.quote blockquote{font-size:clamp(2.5rem,5.6vw,5rem);color:#f8f4ef}.quote blockquote em{color:#b5afea}.quote-mark{color:#b5afea;opacity:.5}
@@ -462,13 +462,13 @@ body { overflow-x:clip; }
 <noscript><style>#loader{display:none}</style><p style="padding:24px">Enable JavaScript to explore the interactive project gallery. Contact: sarabencheqroune1@gmail.com</p></noscript>
 <div id="loader" aria-hidden="true">
   <div class="loader-card"><div class="loader-inner">
-  <span>Powered by</span>
-    <div class="loader-words">
-      <span class="loader-word">adrenaline ⚡</span>
-      <span class="loader-word">caffeine ☕</span>
-      <span class="loader-word">insomnia 🌙</span>
-      <span class="loader-word">miracles ✨</span>
-    </div>
+    <span>Powered by</span>
+      <div class="loader-words">
+        <span class="loader-word">adrenaline ⚡</span>
+        <span class="loader-word">caffeine ☕</span>
+        <span class="loader-word">insomnia 🌙</span>
+        <span class="loader-word">miracles ✨</span>
+      </div>
   </div></div>
 </div>
 
@@ -559,7 +559,7 @@ body { overflow-x:clip; }
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Recent Projects</span>
-        <h2 class="accent-line">A few things I built instead of getting enough sleep.</h2>
+        <h3 class="accent-line">A few things I built instead of getting enough sleep.</h3>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filter projects">
         <button type="button" class="filter active" data-f="all">All</button>
