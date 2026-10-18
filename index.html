@@ -1,4 +1,22 @@
-<!doctype html><html lang="en" data-theme="light"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.footer-avatar{display:block;width:38px;height:38px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid var(--line);margin:10px auto 0}</style></head><body>
+<!doctype html><html lang="en" data-theme="light"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.footer-avatar{display:block;width:38px;height:38px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid var(--line);margin:10px auto 0}</style>
+<style>
+/* Project explorer: separate projects connected as a visual browsing path. */
+#projects{position:relative;background:var(--bg-light)}
+#projects .section-head{margin-bottom:40px}#projects .filters{margin-bottom:42px}
+.dialog-stages{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 24px;padding-left:22px;font:400 .75rem var(--font-body);color:var(--title-dark)}.flow-legend{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:980px;margin:0 auto;padding:18px 0;border-top:1px solid var(--line);font:400 .65rem var(--font-label);letter-spacing:.15em;color:var(--muted)}.flow-legend>span:first-child{display:flex;align-items:center;gap:9px;color:var(--title)}.flow-legend i{width:6px;height:6px;border-radius:50%;background:var(--title);box-shadow:0 0 0 4px var(--tint)}
+#projects .project-grid{position:relative;display:flex;flex-direction:column;gap:88px;max-width:980px;margin:0 auto;padding:24px 0 32px;isolation:isolate;background-image:radial-gradient(var(--line) .8px,transparent .8px);background-size:22px 22px}
+.flow-connectors{position:absolute;inset:0;width:100%;height:100%;z-index:-1;overflow:visible;pointer-events:none}.flow-wire-base{stroke:var(--bg-light);stroke-width:10;fill:none}.flow-wire{stroke:var(--title);stroke-width:1.6;stroke-dasharray:5 6;opacity:.5;fill:none}.flow-port{fill:var(--bg-light);stroke:var(--title);stroke-width:1.5}.flow-signal{fill:var(--title)}
+#projects .flow-stop{position:relative;display:block;width:68%;margin:0;border:0;border-radius:0;overflow:visible;background:transparent;will-change:auto;opacity:1!important;transform:none!important}
+#projects .flow-stop[data-side="right"]{align-self:flex-end}
+.flow-node{position:relative;display:flex;flex-direction:column;gap:24px;width:100%;padding:28px 30px;border:1px solid var(--line);border-left:3px solid var(--title);border-radius:12px;background:var(--bg-light);color:var(--text);text-align:left;cursor:pointer;box-shadow:0 6px 22px #29265008;transition:background .25s,box-shadow .25s,border-color .25s}
+.flow-node:hover,.flow-node:focus-visible{background:var(--surface);border-color:var(--title);box-shadow:0 12px 35px #5552ac18}
+.flow-node-top{display:flex;align-items:center;gap:14px}.flow-number{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--tint);color:var(--title);font:500 .75rem var(--font-label);flex:none}.flow-node .project-cat{font-size:.6rem;line-height:1.5}.flow-year{margin-left:auto;color:var(--muted);font:400 .65rem var(--font-label)}
+.flow-node .project-name{display:block;font-size:clamp(1.35rem,2.7vw,2.05rem);max-width:100%;font-family:var(--font-display);letter-spacing:-.035em;line-height:1.2}
+.flow-node-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding-top:18px}.flow-stack{font:400 .62rem var(--font-label);line-height:1.7;letter-spacing:.05em;color:var(--muted)}.flow-open{display:flex;gap:12px;align-items:center;white-space:nowrap;font:500 .68rem var(--font-body);color:var(--title)}.flow-open>span{font-size:1.2rem;transition:transform .25s}.flow-node:hover .flow-open>span{transform:translate(3px,-3px)}
+@media(max-width:640px){#projects .project-grid{gap:56px;padding-block:18px}#projects .flow-stop{width:100%}.flow-node{padding:22px 20px;gap:20px}.flow-node-top{gap:10px}.flow-node-bottom{gap:14px;flex-wrap:wrap}.flow-open{margin-left:auto}.flow-legend{font-size:.58rem;letter-spacing:.07em}.flow-legend>span:last-child{max-width:130px;text-align:right}.flow-year{font-size:.6rem}}
+@media(prefers-reduced-motion:reduce){.flow-signal{display:none}.flow-node,.flow-open>span{transition:none}}
+</style>
+</head><body>
 <title>Sara Bencheqroune</title>
 <meta name="description" content="Sara Bencheqroune — AI and data engineering portfolio. Explore machine learning, computer vision, and automation projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -567,7 +585,7 @@ body { overflow-x:clip; }
         <button type="button" class="filter" data-f="vision">Computer vision</button>
         <button type="button" class="filter" data-f="auto">Automation &amp; apps</button>
       </div>
-      <div class="project-grid" id="project-grid"></div>
+      <div class="flow-legend"><span><i aria-hidden="true"></i> PROJECT EXPLORER</span><span>Select a node to look inside ↗</span></div><div class="project-grid" id="project-grid" aria-label="Connected project explorer"></div>
     </div>
   </section>
 
@@ -928,19 +946,37 @@ body { overflow-x:clip; }
     return s + '</svg>';
   }
   const pgrid = document.getElementById('project-grid');
-  pgrid.innerHTML = projects.map(p => `
-    <article class="project" data-f="${p.f}">
-      <div class="project-media"><span class="badge">${p.badge}</span>${graph(p.nodes)}${p.metric ? `<div class="metric"><b>${p.metric[0]}</b><small>${p.metric[1]}</small></div>` : ''}</div>
-      <div class="project-frame">
-        <span class="project-cat">${p.cat}</span>
-        <h3 class="project-name">${p.name}</h3>
-        
-        <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <div class="project-links"><button type="button" class="project-details" data-project="${projects.indexOf(p)}" aria-label="Explore ${p.name}">Explore workflow ↗</button>
-        ${p.url ? `<a class="view" href="${p.url}" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M9 7h8v8"/></svg></a>` : ''}
-        </div>
-      </div>
+  pgrid.innerHTML = projects.map((p,i) => `
+    <article class="project flow-stop" data-f="${p.f}">
+      <button type="button" class="flow-node" data-project="${i}" aria-label="Explore ${p.name}: description and workflow" aria-haspopup="dialog">
+        <span class="flow-node-top"><span class="flow-number">${String(i+1).padStart(2,'0')}</span><span class="project-cat">${p.cat}</span><span class="flow-year">${p.badge}</span></span>
+        <span class="project-name">${p.name}</span>
+        <span class="flow-node-bottom"><span class="flow-stack">${p.tags.slice(0,3).join(' / ')}</span><span class="flow-open">Explore workflow <span aria-hidden="true">↗</span></span></span>
+      </button>
     </article>`).join('');
+  const flowSvg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  flowSvg.classList.add('flow-connectors');flowSvg.setAttribute('aria-hidden','true');pgrid.prepend(flowSvg);
+  function drawProjectFlow(){
+    const visible=[...pgrid.querySelectorAll('.flow-stop:not([hidden])')];
+    const mobile=matchMedia('(max-width:640px)').matches;
+    visible.forEach((el,i)=>el.dataset.side=mobile?'left':(i%2?'right':'left'));
+    const W=pgrid.clientWidth,H=pgrid.clientHeight;flowSvg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+    let markup='';
+    visible.forEach((el,i)=>{
+      if(i===visible.length-1)return;
+      const next=visible[i+1];
+      const x1=el.offsetLeft+el.offsetWidth/2,y1=el.offsetTop+el.offsetHeight;
+      const x2=next.offsetLeft+next.offsetWidth/2,y2=next.offsetTop;
+      const mid=(y1+y2)/2;
+      const path=`M ${x1} ${y1} C ${x1} ${mid}, ${x2} ${mid}, ${x2} ${y2}`;
+      markup+=`<path class="flow-wire-base" d="${path}"/><path class="flow-wire" d="${path}"/><circle class="flow-port" cx="${x1}" cy="${y1}" r="4"/><circle class="flow-port" cx="${x2}" cy="${y2}" r="4"/>`;
+      if(!reduce)markup+=`<circle class="flow-signal" r="3.5"><animateMotion dur="${3+i*.4}s" repeatCount="indefinite" path="${path}"/></circle>`;
+    });
+    flowSvg.innerHTML=markup;
+  }
+  new ResizeObserver(drawProjectFlow).observe(pgrid);
+  document.fonts.ready.then(drawProjectFlow);
+  requestAnimationFrame(drawProjectFlow);
 
   // Filters
   const cards = [...pgrid.querySelectorAll('.project')];
@@ -949,6 +985,7 @@ body { overflow-x:clip; }
     cards.forEach(c => { c.hidden = !(b.dataset.f === 'all' || c.dataset.f === b.dataset.f); });
     document.querySelectorAll('.filter').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
     if (!reduce) cards.filter(c => !c.hidden).forEach((c, i) => c.animate([{opacity:0, translate:'0 18px'},{opacity:1, translate:'0 0'}], {duration:450,delay:i*45,easing:'ease-out'}));
+    drawProjectFlow();
     slide();
   }));
 
@@ -963,7 +1000,7 @@ body { overflow-x:clip; }
     const mid = pgrid.clientWidth / 2;
     let i = 0;
     cards.forEach(c => {
-      if (c.hidden) return;
+      if (c.hidden || c.classList.contains('flow-stop')) return;
       const side = oneCol ? (i % 2 ? 1 : -1) : (c.offsetLeft + c.offsetWidth / 2 < mid ? -1 : 1); i++;
       const top = c.getBoundingClientRect().top;
       const p = Math.min(1, Math.max(0, (vh - top) / (vh * 0.85)));
@@ -1188,7 +1225,7 @@ body { overflow-x:clip; }
   pgrid.addEventListener('click', e => {
     const button = e.target.closest('[data-project]'); if (!button) return;
     const p = projects[Number(button.dataset.project)];
-    dialog.innerHTML = `<button type="button" class="dialog-close" aria-label="Close project details">×</button><span class="eyebrow">${p.cat}</span><h2 class="dialog-title" id="dialog-title">${p.name}</h2><p class="dialog-body">${p.detail || p.text}</p>${p.status ? `<p class="project-cat" style="margin-bottom:16px">${p.status}</p>` : ''}${graph(p.nodes)}${p.metric ? `<div class="metric"><b>${p.metric[0]}</b><small>${p.metric[1]}</small></div>` : ''}<div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>${p.url ? `<a class="hero-link" href="${p.url}" target="_blank" rel="noopener">View on GitHub ↗</a>` : ''}`;
+    dialog.innerHTML = `<button type="button" class="dialog-close" aria-label="Close project details">×</button><span class="eyebrow">${p.cat}</span><h2 class="dialog-title" id="dialog-title">${p.name}</h2><p class="dialog-body">${p.detail || p.text}</p>${p.status ? `<p class="project-cat" style="margin-bottom:16px">${p.status}</p>` : ''}${graph(p.nodes)}<ol class="dialog-stages" aria-label="Workflow stages">${p.nodes.map(n=>`<li>${n}</li>`).join('')}</ol>${p.metric ? `<div class="metric"><b>${p.metric[0]}</b><small>${p.metric[1]}</small></div>` : ''}<div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>${p.url ? `<a class="hero-link" href="${p.url}" target="_blank" rel="noopener">View on GitHub ↗</a>` : ''}`;
     dialog.showModal();
     dialog.querySelector('.dialog-close').onclick = () => dialog.close();
   });
